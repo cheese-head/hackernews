@@ -1,6 +1,7 @@
 package api
 
 import (
+	"context"
 	"encoding/json"
 	"fmt"
 	"net/http"
@@ -41,7 +42,7 @@ func WithHttpClient(httpClient *http.Client) func(*Client) {
 }
 
 // GetItem returns the item with the given id.
-func (c *Client) GetItem(id int) (*models.Item, error) {
+func (c *Client) GetItem(ctx context.Context, id int) (*models.Item, error) {
 	url := fmt.Sprintf("%s/%v.json", itemURL, id)
 	resp, err := c.httpClient.Get(url)
 	if err != nil {
@@ -55,7 +56,7 @@ func (c *Client) GetItem(id int) (*models.Item, error) {
 }
 
 // GetUser returns the user with the given username.
-func (c *Client) GetUser(username string) (*models.User, error) {
+func (c *Client) GetUser(ctx context.Context, username string) (*models.User, error) {
 	url := fmt.Sprintf("%s/%s.json", userURL, username)
 	resp, err := c.httpClient.Get(url)
 	if err != nil {

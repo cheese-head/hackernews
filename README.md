@@ -15,10 +15,12 @@ Some examples of how to use the library are shown below.
 package tests
 
 import (
-	"github.com/cheese-head/hackernews/api"
+	"context"
 	"net/http"
 	"testing"
 	"time"
+
+	"github.com/cheese-head/hackernews/api"
 )
 
 func TestHackernewsClient(t *testing.T) {
@@ -27,7 +29,7 @@ func TestHackernewsClient(t *testing.T) {
 		t.Fatal(err)
 	}
 
-	item, err := client.GetItem(564554)
+	item, err := client.GetItem(context.Background(), 564554)
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -49,7 +51,7 @@ func TestHackerNewsClientWithOptions(t *testing.T) {
 		t.Fatal(err)
 	}
 
-	item, err := client.GetItem(564554)
+	item, err := client.GetItem(context.Background(), 564554)
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -58,6 +60,7 @@ func TestHackerNewsClientWithOptions(t *testing.T) {
 		t.Fatal(err)
 	}
 }
+
 
 ```
 ## Contributing

@@ -1,6 +1,7 @@
 package tests
 
 import (
+	"context"
 	"net/http"
 	"testing"
 	"time"
@@ -14,7 +15,7 @@ func TestHackernewsClient(t *testing.T) {
 		t.Fatal(err)
 	}
 
-	item, err := client.GetItem(564554)
+	item, err := client.GetItem(context.Background(), 564554)
 	if err != nil {
 		t.Fatal(err)
 	}
@@ -36,7 +37,7 @@ func TestHackerNewsClientWithOptions(t *testing.T) {
 		t.Fatal(err)
 	}
 
-	item, err := client.GetItem(564554)
+	item, err := client.GetItem(context.Background(), 564554)
 	if err != nil {
 		t.Fatal(err)
 	}

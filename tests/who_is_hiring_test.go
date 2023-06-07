@@ -1,6 +1,7 @@
 package tests
 
 import (
+	"context"
 	"testing"
 
 	"github.com/cheese-head/hackernews/api"
@@ -11,7 +12,7 @@ func TestWhoIsHiring(t *testing.T) {
 	if err != nil {
 		t.Fatal(err)
 	}
-	user, err := hackernews.GetUser("whoishiring")
+	user, err := hackernews.GetUser(context.Background(), "whoishiring")
 	if err != nil {
 		t.Fatal(err)
 	}
