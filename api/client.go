@@ -3,8 +3,9 @@ package api
 import (
 	"encoding/json"
 	"fmt"
-	"hackernews/api/models"
 	"net/http"
+
+	"github.com/cheese-head/hackernews/api/models"
 )
 
 const (

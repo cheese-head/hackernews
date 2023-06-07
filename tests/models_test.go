@@ -2,9 +2,10 @@ package tests
 
 import (
 	"encoding/json"
-	"hackernews/api/models"
 	"io/ioutil"
 	"testing"
+
+	"github.com/cheese-head/hackernews/api/models"
 )
 
 func TestModels(t *testing.T) {

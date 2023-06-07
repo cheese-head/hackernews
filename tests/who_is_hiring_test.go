@@ -1,8 +1,9 @@
 package tests
 
 import (
-	"hackernews/api"
 	"testing"
+
+	"github.com/cheese-head/hackernews/api"
 )
 
 func TestWhoIsHiring(t *testing.T) {
