@@ -1,0 +1,17 @@
+{
+    "id": 1,
+    "deleted": false,
+    "type": "job",
+    "by": "user",
+    "time": 123123213,
+    "text": "",
+    "dead": false,
+    "parent": 1,
+    "poll": 1,
+    "kids": [1],
+    "url": "",
+    "score": 2,
+    "title": "",
+    "parts": [1],
+    "descendants": 1
+}
